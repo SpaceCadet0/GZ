@@ -82,11 +82,11 @@ footer {
 }
 
 .phone::before {
-    content: url(/img/svg/phone.svg)
+    content: url(img/svg/phone.svg)
 }
 
 .mail:before {
-    content: url(/img/svg/mail.svg)
+    content: url(img/svg/mail.svg)
 }
 .phone, .mail {
     text-align: right;
@@ -186,7 +186,7 @@ height: 100%;
     color: #7A9E24;
 }
 .attach a:before {
-    content: url(/img/svg/attach.svg);
+    content: url(img/svg/attach.svg);
     margin-right: 10px;
 }
 
@@ -263,7 +263,7 @@ height: 100%;
 
 
 .contacts {
-    background: no-repeat url("/img/png/streetmap.png") center center;
+    background: no-repeat url("img/png/streetmap.png") center center;
     padding: 30px;
     height: 650px;
 }
@@ -283,18 +283,18 @@ height: 100%;
 }
 
 .contacts__location:before {
-    content: url(/img/svg/location.svg);
+    content: url(img/svg/location.svg);
     margin-right: 10px;
 
 }
 
 .contacts__phone:before {
-    content: url(/img/svg/c-phone.svg);
+    content: url(img/svg/c-phone.svg);
     margin-right: 10px;
 }
 
 .contacts__mail:before {
-    content: url(/img/svg/envelope.svg);
+    content: url(img/svg/envelope.svg);
     margin-right: 10px;
 
 
@@ -302,7 +302,14 @@ height: 100%;
 
 
 
-
+.up__btn{
+width: 20px;
+height: 20px;
+background: #7A9E24;
+position: fixed;
+right: 30px;
+bottom: 30px;
+}
 
 
 
