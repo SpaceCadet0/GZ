@@ -69,17 +69,17 @@ hr {
 header,
 footer {
     background: rgba(33, 44, 67, 0.8);
+}
+
+.header__info {
+    background: #212C43;
     padding-top: 21px;
+
 }
 
 
 
 
-
-
-.logo__block {
-    margin-bottom: 20px;
-}
 
 .phone::before {
     content: url(../img/svg/phone.svg)
@@ -96,9 +96,17 @@ footer {
 .mail a {
     color: #FAFCFE;
     font-weight: 600;
+    transition: all 0.5s ease;
+
+}
+.phone a:hover,
+.mail a:hover {
+    color: #7A9E24;
+    text-decoration: none;
 }
 
 .menu {
+    padding-top: 21px;
     padding-bottom: 20px;
 }
 
@@ -111,9 +119,13 @@ footer {
     color: #FAFCFE;
     font-weight: 600;
     text-transform: uppercase;
+    transition: all 0.5s ease;
 }
 
-
+.menu__item a:hover {
+    color: #7A9E24;
+    text-decoration: none;
+}
 
 
 .about {
@@ -311,14 +323,22 @@ background: #7A9E24;
 position: fixed;
 right: 30px;
 bottom: 30px;
+z-index: 1000;
+
+}
+.hidden {
+    display: none;
 }
 
-
+.visible {
+    display: block;
+}
 
 .footer__info {
     background: #212C43;
     padding-top: 15px;
 }
+
 
 
 
