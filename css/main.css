@@ -12,15 +12,6 @@ li {
     margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    /* margin: 0;
-    padding: 0; */
-}
-
 h3 {
     font-family: 'Playfair Display', serif;
     font-size: 36px
@@ -115,22 +106,22 @@ footer {
     content: url(../img/svg/phone.svg)
 }
 
-.mail:before {
-    content: url(../img/svg/mail.svg)
+.insta:before {
+    content: url(../img/svg/insta.svg)
 }
-.phone, .mail {
+.phone, .insta {
     text-align: right;
 }
 
 .phone a,
-.mail a {
+.insta a {
     color: #FAFCFE;
     font-weight: 600;
     transition: all 0.5s ease;
 
 }
 .phone a:hover,
-.mail a:hover {
+.insta a:hover {
     color: #7A9E24;
     text-decoration: none;
 }
@@ -382,7 +373,6 @@ z-index: 1000;
     padding: 10px;
 }
 .copyright {
-    font-size: ;
     color: #EAEDF4;
     padding: 20px;
     text-align: center;

@@ -112,7 +112,7 @@
 .glider-dot:hover,
 .glider-dot:focus,
 .glider-dot.active {
-  background: #a89cc8;
+  background: #7cac45;
 }
 @media(max-width: 36em){
   .glider::-webkit-scrollbar {
