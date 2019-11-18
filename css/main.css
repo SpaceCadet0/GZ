@@ -73,38 +73,6 @@ footer {
 
 
 
-
-@media (max-width: 575px) {
-    .logo {
-        width: 200px;;
-    }
-    .header__info {
-        padding-top: 10px;
-        }
-    .menu__wrapper {
-        width: 100%;
-        /* height: 100%; */
-        /* display: flex;
-        justify-content: space-between; */
-        position: absolute;
-        z-index: 2000;
-        background: rgba(33, 44, 67);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 0 0 5px 5px;
-
-    }
-    .menu__item {
-        margin: 30px;
-        text-align: end;
-    }
-    .menu__items {
-        animation-name: fadeIn;
-        animation-duration: 0.4s;
-    }
-    .partners__item {
-    height: 30px;
-    }
-}
 .phone::before {
     content: url(../img/svg/phone.svg)
 }
@@ -364,28 +332,25 @@ height: 100%;
 
 
 .up__btn{
-width: 20px;
-height: 20px;
-background: #7A9E24;
+width: 50px;
+height: 50px;
+content: url(../img/svg/scrollup.svg);
 position: fixed;
 right: 30px;
 bottom: 30px;
 z-index: 1000;
-
+cursor: pointer;
 }
 .hidden {
     display: none;
 }
-
 .visible {
     display: block;
 }
-
 .footer__info {
     background: #212C43;
     padding-top: 15px;
 }
-
 .footer__menu {
     padding: 10px;
 }
@@ -478,4 +443,41 @@ input[type="radio"]:not(:checked) + label:after {
 input[type="checkbox"]:checked + label:after, 
 input[type="radio"]:checked + label:after {
     opacity: 1;
+}
+
+@media (max-width: 575px) {
+    .logo {
+        width: 200px;;
+    }
+    .header__info {
+        padding-top: 10px;
+        }
+    .menu__wrapper {
+        width: 100%;
+        /* height: 100%; */
+        /* display: flex;
+        justify-content: space-between; */
+        position: absolute;
+        z-index: 2000;
+        background: rgba(33, 44, 67);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0 0 5px 5px;
+    }
+    .menu__item {
+        margin: 30px;
+        text-align: end;
+    }
+    .menu__items {
+        animation-name: fadeIn;
+        animation-duration: 0.4s;
+    }
+    .partners__item {
+    height: 30px;
+    }
+    .up__btn {
+    display: none;
+    }
+    .up_btn {
+
+    }
 }
