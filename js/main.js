@@ -63,17 +63,28 @@
         }
     })
 
-    //modal 
-    var btnRadius = $('.cd-modal-bg').width() / 2,
-        left = $('.cd-modal-bg').offset().left + btnRadius,
-        top = $('.cd-modal-bg').offset().top + btnRadius - $(window).scrollTop(),
-        scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
+    //callback
 
-    function scaleValue(topValue, leftValue, radiusValue, windowW, windowH) {
-        var maxDistHor = (leftValue > windowW / 2) ? leftValue : (windowW - leftValue),
-            maxDistVert = (topValue > windowH / 2) ? topValue : (windowH - topValue);
-        return Math.ceil(Math.sqrt(Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2)) / radiusValue);
-    }
+    $("#submit").click(function() { 
+        var name = $('input[name=text]').val(); 
+        var tel = $('input[name=phone]').val();
+        var otpravka = true;
+        if(name==""){ 
+        otpravka = false;
+        }
+        if(tel==""){ 
+        otpravka = false;
+        }
+        if(otpravka) 
+        {
+       
+        dannie = {'polz_name':name, 'polz_tel':tel};
+        $.post('senda.php', dannie, function(otvet){ 
+        rezultat = '<div style="color:#D80018;">'+otvet.text+'</div>';
+        $("#form_result").hide().html(rezultat).slideDown();
+        }, 'json'); 
+        }
+        });
 
 
 
