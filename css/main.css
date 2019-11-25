@@ -138,16 +138,16 @@ footer {
 .about {
     padding: 30px 0 30px 0;
 }
-/* .about__title, .about__text, .about__btn {
-    margin-left: 30px;
-} */
+.about__title{
+    margin-bottom: 30px;
+}
+.about__text{
+    margin-top: 50px;
+}
 .about__img {
 width: 100%;
 height: 100%;
 }
-
-
-
 
 .service {
     background: #EAEDF4;
@@ -218,8 +218,6 @@ height: 100%;
 
 
 
-
-
 .advantages {
     background: #FAFCFE;
     padding: 30px 0 30px 0;
@@ -233,7 +231,6 @@ height: 100%;
  background: #FAFCFE;
  padding: 10px;
 }
-
 
 .advantages__tab {
     margin-top: 40px;
