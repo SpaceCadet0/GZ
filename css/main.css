@@ -177,6 +177,8 @@ height: 100%;
 }
 .price__tab:hover {
     border: 2px solid #7A9E24;
+    background: rgba(33, 44, 67, 0.01);
+
 }
 .price__tab-center{
     margin: 20px ;
@@ -603,6 +605,9 @@ input[type="radio"]:checked + label:after {
     h4 {
         font-size: 20px;
     }
+    p {
+        font-size: 14px
+    }
     .logo {
         width: 200px;;
     }
@@ -610,6 +615,7 @@ input[type="radio"]:checked + label:after {
         padding-top: 10px;
         }
     .menu__wrapper {
+        left: 0;
         width: 100%;
         /* height: 100%; */
         /* display: flex;
@@ -625,8 +631,12 @@ input[type="radio"]:checked + label:after {
         text-align: end;
     }
     .menu__items {
-        animation-name: fadeIn;
-        animation-duration: 0.4s;
+        z-index: 999;
+        /* animation-name: fadeIn;
+        animation-duration: 0.4s; */
+    }
+    .about__text {
+        margin-top: 0px;
     }
     .partners__item {
     height: 30px;

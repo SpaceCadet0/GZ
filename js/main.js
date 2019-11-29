@@ -47,7 +47,6 @@
 
     hamburger.addEventListener('click', e => {
         e.stopPropagation();
-
         toggleMenu();
     });
 
