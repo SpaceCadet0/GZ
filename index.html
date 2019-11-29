@@ -11,11 +11,25 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/glider.css">
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/main.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56449374-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-56449374-1');
+</script>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(56447425, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56447425" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
+    <div id="p_prldr">
+        <div class="contpre"><span class="svg_anm"></span></div>
+    </div>
+    <div id="tabs"></div>
+
     <header id="header" class="header">
         <div class="header__info">
             <div class="container">
@@ -37,9 +51,10 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-lg-block align-self-center wow fadeInRight">
-                        
-                            <a class="menu__login" href="#login" title="Заказать обратный звонок"><button>Заказать звонок</button></a>
-                        
+
+                        <a class="menu__login text-decoration-none" href="#login"
+                            title="Заказать обратный звонок"><button>Заказать звонок</button></a>
+
                     </div>
                 </div>
             </div>
@@ -95,9 +110,12 @@
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <!-- <h3 class="about__title">О нас</h3> -->
-                    <p class="about__text">Мы занимаемся подбором и последующей адаптацией персонала на новом рабочем месте.
-                            <br><br>
-                                                        Готовы закрыть все ваши вакансии, начиная с неквалифицированного персонала (разнорабочие, продавцы, уборщицы), до самых высококвалифицированных, «штучных» специалистов (юристы, бухгалтеры, программисты).</p>
+                    <p class="about__text">Мы занимаемся подбором и последующей адаптацией персонала на новом рабочем
+                        месте.
+                        <br><br>
+                        Готовы закрыть все ваши вакансии, начиная с неквалифицированного персонала (разнорабочие,
+                        продавцы, уборщицы), до самых высококвалифицированных, «штучных» специалистов (юристы,
+                        бухгалтеры, программисты).</p>
                 </div>
                 <div class="col-12 col-lg-7">
                     <img class="about__img" src="img/png/about.png" alt="About">
@@ -116,8 +134,13 @@
             </div>
             <div class="row">
                 <div class="m-auto col-12 col-lg-7">
-                    <p class="service__text">Сначала мы ищем сотрудников по критериям заказчика (должность, ЗП, занятость, образование и т. д.) на основе нашей собственной базы соискателей, при необходимости задействуем другие источники. Затем приступаем к оценке найденных кандидатов. Смотрим как на профессиональные параметры (опыт, навыки), так и на личные качества, среди которых амбициозность, психологическая устойчивость, склонность к риску или наоборот неприятие риска. Здесь многое будет зависеть от потребностей заказчика. Лучший (или лучшие) получат работу у вас.
-                            
+                    <p class="service__text">Сначала мы ищем сотрудников по критериям заказчика (должность, ЗП,
+                        занятость, образование и т. д.) на основе нашей собственной базы соискателей, при необходимости
+                        задействуем другие источники. Затем приступаем к оценке найденных кандидатов. Смотрим как на
+                        профессиональные параметры (опыт, навыки), так и на личные качества, среди которых
+                        амбициозность, психологическая устойчивость, склонность к риску или наоборот неприятие риска.
+                        Здесь многое будет зависеть от потребностей заказчика. Лучший (или лучшие) получат работу у вас.
+
                     </p>
                 </div>
             </div>
@@ -184,7 +207,8 @@
                         <div class="advantages__tab">
                             <img class="advantages__image wow fadeInLeft" src="img/svg/feature2.svg" alt="feature1">
                             <h4>Заголовок</h4>
-                            <p>Мы найдем вам специалистов, которые будут соответствовать своей должности и имиджу вашей компании</p>
+                            <p>Мы найдем вам специалистов, которые будут соответствовать своей должности и имиджу вашей
+                                компании</p>
                         </div>
                     </div>
                 </div>
@@ -193,7 +217,8 @@
                         <div class="advantages__tab">
                             <img class="advantages__image wow fadeInLeft" src="img/svg/feature3.svg" alt="feature1">
                             <h4>Заголовок</h4>
-                            <p>Проведем адаптацию специалиста в период испытательного срока, чтобы он быстрее мог влиться в рабочий процесс</p>
+                            <p>Проведем адаптацию специалиста в период испытательного срока, чтобы он быстрее мог
+                                влиться в рабочий процесс</p>
                         </div>
                     </div>
                     <div class="offset-md-1 col-md-6 col-12">
@@ -207,28 +232,14 @@
             </div>
             <div class="row">
                 <div class="col-12 col-lg-8 m-auto">
-                    <p class="advantages__text">Мы ведем набор соискателей в собственных интересах и интересах наших клиентов. Мы стремимся к длительному сотрудничеству, поэтому очень тщательно относимся к вопросам набора персонала. Вам могут предложить пройти тестирование, выполнить задание, пройти собеседование с будущим руководителем. В свою очередь мы стараемся назначать встречи в наиболее удобное для кандидата время и предельно быстро сообщать о результатах собеседования.
+                    <p class="advantages__text">Мы ведем набор соискателей в собственных интересах и интересах наших
+                        клиентов. Мы стремимся к длительному сотрудничеству, поэтому очень тщательно относимся к
+                        вопросам набора персонала. Вам могут предложить пройти тестирование, выполнить задание, пройти
+                        собеседование с будущим руководителем. В свою очередь мы стараемся назначать встречи в наиболее
+                        удобное для кандидата время и предельно быстро сообщать о результатах собеседования.
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="price" class="price">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="features" class="features">
-        <div class="container">
-
-        </div>
-    </section>
-
-    <section id="callback" class="callback">
-        <div class="container">
-
         </div>
     </section>
 
@@ -238,20 +249,18 @@
                 <h3 class="partners__title">Партнеры</h3>
             </div>
             <div class="row">
-                <ul class="col-10 m-auto d-flex justify-content-around align-items-center">
-                    <li class="wow fadeIn">
-                        <img src="img/svg/me.svg" class="partners__item me" alt="Мегафон"></li>
-                    <li class="wow fadeIn">
-                        <img src="img/svg/sr.svg" class="partners__item hh" alt="HeadHunter"></li>
-                        <li class="wow fadeIn">
-                                <img src="img/svg/dom.svg" class="partners__item dom" alt="Дом.ru"></li>
-                                <li class="wow fadeIn">
-                                        <img src="img/svg/lavka.svg" class="partners__item ml" alt="Мясная лавка"></li>
-                    <li class="wow fadeIn">
-                        <img src="img/svg/ot.svg" class="partners__item ot" alt="Открытие"></li>
-                    
-                   
-                </ul>
+                <div class="col-10 m-auto d-flex justify-content-around align-items-center">
+                    <div class="wow fadeIn">
+                        <img src="img/svg/me.svg" class="partners__item me" alt="Мегафон"></div>
+                    <div class="wow fadeIn">
+                        <img src="img/svg/sr.svg" class="partners__item hh" alt="Союз Риэлторов"></div>
+                    <div class="wow fadeIn">
+                        <img src="img/svg/dom.svg" class="partners__item dom" alt="Дом.ru"></div>
+                    <div class="wow fadeIn">
+                        <img src="img/svg/lavka.svg" class="partners__item ml" alt="Мясная лавка"></div>
+                    <div class="wow fadeIn">
+                        <img src="img/svg/ot.svg" class="partners__item ot" alt="Открытие"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -263,116 +272,136 @@
                     <h3 class="feedback__title">Отзывы</h3>
                 </div>
             </div>
-            <div class="glider-contain multiple">
-                <button role="button" aria-label="Previous" class="glider-prev">«</button>
-
-                <div class="glider">
-                    <div>
-                        <div class="visible">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="feedback__name">ООО «ИнвестИдеи»<br>
-                                        Лобанов Я. П., директор по маркетингу</p>
-                                </div>
+            <div class="swiper-container">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col">
+                                <p class="feedback__name">ООО «ИнвестИдеи»<br>
+                                    Лобанов Я. П., директор по маркетингу</p>
                             </div>
-                            <div class="row">
-                                <hr>
+                        </div>
+                        <div class="row">
+                            <hr>
+                        </div>
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
+                                <img class="feedback__img" src="img/jpg/invest.jpg" alt="Инвитро">
                             </div>
-                            <div class="row d-flex justify-content-around">
-                                <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
-                                    <img class="feedback__img" src="img/jpg/invest.jpg" alt="Инвитро">
-                                </div>
-                                <div class="col-6 d-none d-lg-block">
-                                    <p class="feedback__text">Выражаем признательность команде ООО «GoodZone» за качественно оказанные услуги в подборе персонала. В нашу компанию ООО «ИнвестИдеи» требовались специалисты контактного центра, обязательным условием для новых сотрудников были: опыт на аналогичной должности от двух лет, законченное образование.<br><br>
-                                            Сроки для подбора озвучили сжатые, так как без специалистов компания не могла функционировать на 100 процентов. 
-                                            Мы очень благодарны компании «GoodZone» за то, что кандидаты на должность пришли уже через пару дней после подписания договора.<br><br>
-                                            В итоге мы довольны и квалификацией подобранных сотрудников, и сроками, в которые подбор был выполнен.
-                                            <br><br>
-                                                                    Надеемся на дальнейшее сотрудничество.
-                                            </p>
-                                </div>
+                            <div class="col-6 d-none d-lg-block">
+                                <p class="feedback__text">Выражаем признательность команде ООО «GoodZone» за качественно
+                                    оказанные услуги в подборе персонала. В нашу компанию ООО «ИнвестИдеи» требовались
+                                    специалисты контактного центра, обязательным условием для новых сотрудников были:
+                                    опыт на аналогичной должности от двух лет, законченное образование.<br><br>
+                                    Сроки для подбора озвучили сжатые, так как без специалистов компания не могла
+                                    функционировать на 100 процентов.
+                                    Мы очень благодарны компании «GoodZone» за то, что кандидаты на должность пришли уже
+                                    через пару дней после подписания договора.<br><br>
+                                    В итоге мы довольны и квалификацией подобранных сотрудников, и сроками, в которые
+                                    подбор был выполнен.
+                                    <br><br>
+                                    Надеемся на дальнейшее сотрудничество.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="visible">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="feedback__name">ООО «Планета Мебели» <br>
-                                        Носов  Д. В., руководитель отдела рекламы</p>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col">
+                                <p class="feedback__name">ООО «Планета Мебели» <br>
+                                    Носов Д. В., руководитель отдела рекламы</p>
                             </div>
-                            <div class="row">
-                                <hr>
+                        </div>
+                        <div class="row">
+                            <hr>
+                        </div>
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
+                                <img class="feedback__img" src="img/jpg/mebel.jpg" alt="Инвитро">
                             </div>
-                            <div class="row d-flex justify-content-around">
-                                <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
-                                    <img class="feedback__img" src="img/jpg/mebel.jpg" alt="Инвитро">
-                                </div>
-                                <div class="col-6 d-none d-lg-block">
-                                    <p class="feedback__text">Сотрудничество между компаниями, очень деликатный процесс, который требует ответственного подхода с обоих сторон. Наша фирма «Mebel-Planet» занимается производство мебели под заказ, и как любому производству при расширении, понадобились специалисты столярного профиля.
-                                         <br><br>
-                                            За решением данной проблемы в виде подбора новых сотрудников. Мы обратились к нашим не побоюсь это слова товарищам и партнерам, компании «Goodzone».<br><br>
-                                            Кандидаты оправдали все наши ожидания как по своим способностям, так и по мотивации к работе.<br><br>
-                                            Большое вам спасибо за помощь компания «Goodzone», и будьте уверены, когда в следующий раз у нас появиться необходимость в персонале, мы обратимся именно к вам.
-                                            </p>
-                                </div>
+                            <div class="col-6 d-none d-lg-block">
+                                <p class="feedback__text">Сотрудничество между компаниями, очень деликатный процесс,
+                                    который требует ответственного подхода с обоих сторон. Наша фирма «Mebel-Planet»
+                                    занимается производство мебели под заказ, и как любому производству при расширении,
+                                    понадобились специалисты столярного профиля.
+                                    <br><br>
+                                    За решением данной проблемы в виде подбора новых сотрудников. Мы обратились к нашим
+                                    не побоюсь это слова товарищам и партнерам, компании «Goodzone».<br><br>
+                                    Кандидаты оправдали все наши ожидания как по своим способностям, так и по мотивации
+                                    к работе.<br><br>
+                                    Большое вам спасибо за помощь компания «Goodzone», и будьте уверены, когда в
+                                    следующий раз у нас появиться необходимость в персонале, мы обратимся именно к вам.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="visible">
-                            <div class="row">
-                                <div class="col">
-                                    <p class="feedback__name">Ресторан европейской кухни, ORGANIC food & drink <br>
-                                        Веселова Елена Максимовна, менеджер</p>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col">
+                                <p class="feedback__name">Ресторан европейской кухни, ORGANIC food & drink <br>
+                                    Веселова Елена Максимовна, менеджер</p>
                             </div>
-                            <div class="row">
-                                <hr>
+                        </div>
+                        <div class="row">
+                            <hr>
+                        </div>
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
+                                <img class="feedback__img" src="img/jpg/organic.jpg" alt="Инвитро">
                             </div>
-                            <div class="row d-flex justify-content-around">
-                                <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
-                                    <img class="feedback__img" src="img/jpg/organic.jpg" alt="Инвитро">
-                                </div>
-                                <div class="col-6 d-none d-lg-block">
-                                    <p class="feedback__text">Хотелось бы выразить благодарность кадровому агентству «ГудЗон» за качественно подобранный персонал в минимально короткие сроки. Открывали новое заведение в Екатеринбурге, а именно ресторан европейской кухни. Нам требовалось: 8 официантов, 2 кальянщика, 2 менеджера и один управляющий. Каждым кандидатом, без исключения, оказались довольны, так как все они соответствовали заявленным требованиям и максимально быстро включились в работу. <br><br>Отдельное спасибо хочется сказать за Ларису Викторовну, которую агентство порекомендовало нам на должность управляющей. Благодаря Ларисе Викторовне нам удалось дать заведению тот старт, с помощью которого мы смогли «раскрутить» наше заведение в максимально сжатый период. </p>
-                                </div>
+                            <div class="col-6 d-none d-lg-block">
+                                <p class="feedback__text">Хотелось бы выразить благодарность кадровому агентству
+                                    «ГудЗон» за качественно подобранный персонал в минимально короткие сроки. Открывали
+                                    новое заведение в Екатеринбурге, а именно ресторан европейской кухни. Нам
+                                    требовалось: 8 официантов, 2 кальянщика, 2 менеджера и один управляющий. Каждым
+                                    кандидатом, без исключения, оказались довольны, так как все они соответствовали
+                                    заявленным требованиям и максимально быстро включились в работу. <br><br>Отдельное
+                                    спасибо хочется сказать за Ларису Викторовну, которую агентство порекомендовало нам
+                                    на должность управляющей. Благодаря Ларисе Викторовне нам удалось дать заведению тот
+                                    старт, с помощью которого мы смогли «раскрутить» наше заведение в максимально сжатый
+                                    период. </p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                            <div class="visible">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="feedback__name">ООО «Восток-Запад»<br>
-                                            Рыбаков Владислав Иванович, директор по развитию</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <hr>
-                                </div>
-                                <div class="row d-flex justify-content-around">
-                                    <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
-                                        <img class="feedback__img" src="img/jpg/vostok.jpg" alt="Инвитро">
-                                    </div>
-                                    <div class="col-6 d-none d-lg-block">
-                                        <p class="feedback__text">С агентством Good Zone наше сотрудничество началось два года назад.
-                                                Наша организация открыла новый филиал в г. Екатеринбурге и компании понадобились новые кадры. <br><br>
-                                               После личной встречи с руководством компании убедились на 100%, что выбор был сделан правильно. Замечательная компания, с индивидуальным подходом, гарантией по замене сотрудника, понравилось, что компания прозрачная, гибкая и внимательна к своим клиентам. 
-                                               Был составлен договор, где все пункты были прописаны и обговорены с компанией Good zone, выполнение договора было безукоризненное!<br><br>
-                                               Кадровики компании, очень отзывчивые, оперативные, доброжелательные и внимательные к пожелаем заказчика, как и к соискателям (нашим потенциальным сотрудникам).
-                                               Огромную благодарность выражаю руководителю Good zone, за продуктивное сотрудничество и отличный результат. <br><br>
-                                               Обязательно обратимся к вам снова.
-                                               </p>
-                                    </div>
-                                </div>
+                    <div class="swiper-slide">
+                        <div class="row">
+                            <div class="col">
+                                <p class="feedback__name">ООО «Восток-Запад»<br>
+                                    Рыбаков Владислав Иванович, директор по развитию</p>
                             </div>
                         </div>
-
+                        <div class="row">
+                            <hr>
+                        </div>
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-12 col-xl-4 col-lg-5 col-sm-7">
+                                <img class="feedback__img" src="img/jpg/vostok.jpg" alt="Инвитро">
+                            </div>
+                            <div class="col-6 d-none d-lg-block">
+                                <p class="feedback__text">С агентством Good Zone наше сотрудничество началось два года
+                                    назад.
+                                    Наша организация открыла новый филиал в г. Екатеринбурге и компании понадобились
+                                    новые кадры. <br><br>
+                                    После личной встречи с руководством компании убедились на 100%, что выбор был сделан
+                                    правильно. Замечательная компания, с индивидуальным подходом, гарантией по замене
+                                    сотрудника, понравилось, что компания прозрачная, гибкая и внимательна к своим
+                                    клиентам.
+                                    Был составлен договор, где все пункты были прописаны и обговорены с компанией Good
+                                    zone, выполнение договора было безукоризненное!<br><br>
+                                    Кадровики компании, очень отзывчивые, оперативные, доброжелательные и внимательные к
+                                    пожелаем заказчика, как и к соискателям (нашим потенциальным сотрудникам).
+                                    Огромную благодарность выражаю руководителю Good zone, за продуктивное
+                                    сотрудничество и отличный результат. <br><br>
+                                    Обязательно обратимся к вам снова.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <button role="button" aria-label="Next" class="glider-next">»</button>
-                <div role="tablist" id="dots" class="dots"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+                <!-- <div role="tablist" id="dots" class="dots"></div> -->
             </div>
         </div>
 
@@ -383,7 +412,7 @@
         <div class="container">
             <div class="row">
                 <div class=" col-12 col-md-7 col-lg-5 col-xl-4 offset-lg-1">
-                    <div class="contacts__tab">
+                    <div class="contacts__tab wow fadeIn">
                         <h3 class="contacts__title">Контакты</h3>
                         <div class="d-flex contacts__item-title contacts__location">
                             <h5>адрес</h5>
@@ -403,7 +432,7 @@
                             <h5>почта</h5>
                         </div>
                         <div class="contacts__item">
-                            <p><a href="mailto:hr@goodzone.org">hr@goodzone.org</a></p>
+                            <p><a href="mailto:hr@goodzone.org">hr@goodzone.group</a></p>
                         </div>
                     </div>
                 </div>
@@ -449,7 +478,6 @@
         </div>
 
         <div class="up__btn hidden wow fadeIn" id="up__btn" href="#top" onclick="ScrollUp();return!1;">
-
         </div>
 
         <div class="footer__info">
@@ -489,33 +517,49 @@
                 <input type="tel" name="phone" class="phone" placeholder="Телефон">
                 <input type="text" name="text" class="text" placeholder="Ваше имя" value="">
 
-                <button class="modal__btn"><input id="submit" type="submit" value="Отправить"></button> 
-                <div class="input_check small"><input type="checkbox" class="check active">Нажимая на кнопку «Отправить», я даю свое согласие на <a href="#personal" class="fancybox">обработку
-                                персональных данных</a></div>
+                <button class="modal__btn"><input id="submit" type="submit" value="Отправить"></button>
+                <div class="input_check small"><input type="checkbox" class="check active">Нажимая на кнопку
+                    «Отправить», я даю свое согласие на <a href="#personal" class="fancybox">обработку
+                        персональных данных</a></div>
             </form>
         </div>
     </div>
 
-    <script src="js/wow.min.js"></script>
-    <script src="js/glider.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-
-    <script>
-        new WOW().init();
-        new Glider(document.querySelector('.glider'), {
-            slidesToShow: 1,
-            dots: '#dots',
-            draggable: true,
-            arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next'
-            }
-        })
-    </script>
-    
-    <script src="js/main.js"></script>
 
 </body>
+<script src="js/wow.min.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
 
+<script>
+    new WOW().init();
+    var mySwiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        // effect: 'fade',
+
+        // fadeEffect: {
+        //     crossFade: true
+        // },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            dynamicBullets: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
+<script src="js/main.js"></script>
 
 </html>

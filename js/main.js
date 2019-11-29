@@ -1,5 +1,4 @@
     //menu scroll
-
     const anchors = document.querySelectorAll('a[href*="#m-"]')
 
     for (let anchor of anchors) {
@@ -64,7 +63,6 @@
     })
 
     //callback
-
     $("#submit").click(function() { 
         var name = $('input[name=text]').val(); 
         var tel = $('input[name=phone]').val();
@@ -88,36 +86,51 @@
 
 
 
-    //carousel
-    //  /* этот код помечает картинки, для удобства разработки */
-    //  let i = 1;
-    //  for(let li of carousel.querySelectorAll('li')) {
-    //    li.style.position = 'relative';
-    //    li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-    //    i++;
-    //  }
+    //tabs
+    var tab; // заголовок вкладки
+    var tabContent; // блок содержащий контент вкладки
 
-    //  /* конфигурация */
-    //  let width = 130; // ширина картинки
-    //  let count = 3; // видимое количество изображений
 
-    //  let list = carousel.querySelector('ul');
-    //  let listElems = carousel.querySelectorAll('li');
+    window.onload = function () {
+        tabContent = document.getElementsByClassName('tab__panel');
+        tab = document.getElementsByClassName('tab__title');
+        hideTabsContent(1);
+    }
 
-    //  let position = 0; // положение ленты прокрутки
+    document.getElementById('tabs').onclick = function (event) {
+        let target = event.target;
+        if (target.className == 'tab__title') {
+            for (let i = 0; i < tab.length; i++) {
+                if (target == tab[i]) {
+                    showTabsContent(i);
+                    break;
+                }
+            }
+        }
+    }
 
-    //  carousel.querySelector('.prev').onclick = function() {
-    //    // сдвиг влево
-    //    position += width * count;
-    //    // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
-    //    position = Math.min(position, 0)
-    //    list.style.marginLeft = position + 'px';
-    //  };
+    function hideTabsContent(a) {
+        for (var i = a; i < tabContent.length; i++) {
+            tabContent[i].classList.remove('show');
+            tabContent[i].classList.add("hide");
+            tab[i].classList.remove('tab__title--active');
+        }
+    }
 
-    //  carousel.querySelector('.next').onclick = function() {
-    //    // сдвиг вправо
-    //    position -= width * count;
-    //    // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-    //    position = Math.max(position, -width * (listElems.length - count));
-    //    list.style.marginLeft = position + 'px';
-    //  };
+    function showTabsContent(b) {
+        if (tabContent[b].classList.contains('hide')) {
+            hideTabsContent(0);
+            tab[b].classList.add('tab__title--active');
+            tabContent[b].classList.remove('hide');
+            tabContent[b].classList.add('show');
+        }
+    };
+
+    //preloader
+
+    $(window).on('load', function () {
+        var $preloader = $('#p_prldr'),
+            $svg_anm   = $preloader.find('.svg_anm');
+        $svg_anm.fadeOut();
+        $preloader.delay(500).fadeOut('slow');
+    });

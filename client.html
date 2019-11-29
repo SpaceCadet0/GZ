@@ -11,11 +11,21 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/glider.css">
     <link rel="stylesheet" href="css/main.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56449374-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-56449374-1');
+</script>
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(56447425, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/56447425" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
+        <div id="p_prldr"><div class="contpre"><span class="svg_anm"></span></div></div>
+        <div id="tabs"></div>
     <header id="header" class="header">
         <div class="header__info">
             <div class="container">
@@ -37,9 +47,10 @@
                         </div>
                     </div>
                     <div class="col-auto d-none d-lg-block align-self-center wow fadeInRight">
-                        
-                            <a class="menu__login" href="#login" title="Заказать обратный звонок"><button>Заказать звонок</button></a>
-                        
+
+                        <a class="menu__login text-decoration-none" href="#login" title="Заказать обратный звонок"><button>Заказать
+                                звонок</button></a>
+
                     </div>
                 </div>
             </div>
@@ -90,15 +101,53 @@
 
     </header>
 
-    <section id="about" class="about">
+    <section id="price" class="price">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-4">
-                    <h3 class="about__title">Тарифы</h3>
-                    <p class="about__text">1</p>
+                <div class="col-12">
+                    <h3 class="price__title">Стоимость услуг подбора персонала</h3>
+                    <h5 class="price__subtitle">Условия сотрудничества:</h5>
+                    <ul class="price__subtitle">
+                        <li><p>Фиксированная стоимость подбора кандидата вне зависимости от годового дохода по вакансии.</p></li>
+                        <li><p>Срок подбора персонала: от 3 дней до 2-х недель.</p></li>
+                        <li><p>Гарантии: бесплатная замена в период испытательного срока.</p></li>
+                        <li><p>Проверка рекомендаций с прошлых мест работы кандидата.</p></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 d-lg-flex justify-content-center m-auto">
+                    <div class="col-12 col-md-8 col-lg-4 text-center price__tab wow fadeInLeft">
+                        <h4 class="price__title">Массовый подбор</h4>
+                        <h5 class="price__title">проект по закрытию большого количества однотипных вакансий, в сжатые сроки</h5>
+                        <h3 class="price__title-digit">от 10000 ₽</h3>
+                        <p class="price__text">за подбор</p>
+                        <button class="price__btn">Оставить заявку</button>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-4 text-center price__tab price__tab-center wow fadeIn slow">
+                        <h4 class="price__title">Стандарт</h4>
+                        <h5 class="price__title">подбор квалифицированных специалистов</h5>
+                        <h3 class="price__title-digit">от 5000 ₽</h3>
+                        <p class="price__text">за одного специалиста</p>
+                        <button class="price__btn">Оставить заявку</button>
+                    </div>
+                    <div class="col-12 col-md-8 col-lg-4 text-center price__tab wow fadeInRight">
+                        <h4 class="price__title">Премиум</h4>
+                        <h5 class="price__title">подбор элитного персонала: руководителей высшего и среднего звена и редких специалистов</h5>
+                        <h3 class="price__title-digit">от 15000 ₽</h3>
+                        <p class="price__text">за одного специалиста</p>
+                        <button class="price__btn">Оставить заявку</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-8 m-auto">
+                    <p class="text-center">
+                            Стоимость услуг нашей компании определяется в зависимости от ряда факторов: количества вакансий, сложность и временная продолжительность проекта, объем заказа, а также необходимости предоставления сопутствующих услуг.</p>
                 </div>
             </div>
         </div>
+
     </section>
 
 
@@ -180,9 +229,10 @@
                 <input type="tel" name="phone" class="phone" placeholder="Телефон">
                 <input type="text" name="text" class="text" placeholder="Ваше имя" value="">
 
-                <button class="modal__btn"><input id="submit" type="submit" value="Отправить"></button> 
-                <div class="input_check small"><input type="checkbox" class="check active">Нажимая на кнопку «Отправить», я даю свое согласие на <a href="#personal" class="fancybox">обработку
-                                персональных данных</a></div>
+                <button class="modal__btn"><input id="submit" type="submit" value="Отправить"></button>
+                <div class="input_check small"><input type="checkbox" class="check active">Нажимая на кнопку
+                    «Отправить», я даю свое согласие на <a href="#personal" class="fancybox">обработку
+                        персональных данных</a></div>
             </form>
         </div>
     </div>
@@ -193,17 +243,8 @@
 
     <script>
         new WOW().init();
-        new Glider(document.querySelector('.glider'), {
-            slidesToShow: 1,
-            dots: '#dots',
-            draggable: true,
-            arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next'
-            }
-        })
     </script>
-    
+
     <script src="js/main.js"></script>
 
 </body>
