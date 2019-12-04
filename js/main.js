@@ -42,7 +42,7 @@
     let menu = document.querySelector('.menu__items');
 
     const toggleMenu = () => {
-        menu.classList.toggle('d-block');
+        menu.classList.toggle('active');
     }
 
     hamburger.addEventListener('click', e => {
@@ -54,7 +54,7 @@
         let target = e.target;
         let its_menu = target == menu || menu.contains(target);
         let its_hamburger = target == hamburger;
-        let menu_is_active = menu.classList.contains('d-block');
+        let menu_is_active = menu.classList.contains('active');
 
         if (!its_menu && !its_hamburger && menu_is_active) {
             toggleMenu();
