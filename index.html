@@ -27,9 +27,7 @@
 </head>
 
 <body>
-    <div id="p_prldr">
-        <div class="contpre"><span class="svg_anm"></span></div>
-    </div>
+        <div id="page-preloader"><span class="spinner"></span></div>
     <div id="tabs"></div>
     
     <header id="header" class="header">
@@ -38,24 +36,24 @@
                 <div class="row">
                     <div class="col d-flex">
                         <div class="wow fadeInDown">
-                            <img src="img/svg/logo1.svg" alt="Goodzone" class="logo">
+                           <img src="img/svg/logo1.svg"  alt="Goodzone" class="logo">
                         </div>
-                        <div class="d-md-none ml-auto align-self-center menu__toggle wow fadeInRight"
-                            title="Открыть меню"></div>
-                    </div>
+                        <div class="d-md-none ml-auto align-self-center menu__toggle"
+                        title="Открыть меню"></div>
+
+                    </div>      
 
                     <div class="d-none d-md-block offset-lg-2 col-5 col-lg-3 ml-auto align-self-center wow fadeIn slow">
                         <div class="phone">
-                            <a href="tel:+73433696969">+7 (343) 369 69 69</a>
+                            <a href="tel:+73433821167">+7 (343) 382 11 67</a>
                         </div>
                         <div class="insta">
-                            <a href="https://www.instagram.com/goodzone_inc/" target="_blank">goodzone_inc</a>
+                            <a href="https://www.instagram.com/goodzone.group/" target="_blank">goodzone.group</a>
                         </div>
                     </div>
-                    <div class="col-auto d-none d-lg-block align-self-center wow fadeInRight">
-
-                        <a class="menu__login text-decoration-none" href="#login"
-                            title="Заказать обратный звонок"><button>Заказать звонок</button></a>
+                    <div class="callback col-auto d-none d-lg-block align-self-center wow fadeInRight">
+                        <a class="menu__login text-decoration-none"
+                            title="Заказать обратный звонок"><button class="smartlid__call-button_custom">Заказать звонок</button></a>
                     </div>
                 </div>
             </div>
@@ -63,7 +61,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-9 m-auto">
-                    <nav class="menu wow fadeIn slow">
+                    <nav class="menu">
                         <div class="menu__wrapper">
                             <ul class="justify-content-around menu__items">
                                 <li class="menu__item">
@@ -92,10 +90,10 @@
                                     </a>
                                 </li>
                                 <li class="menu__item phone d-sm-none">
-                                    <a href="tel:+73433696969">+7 (343) 369 69 69</a>
+                                    <a href="tel:+73433821167">+7 (343) 382 11 67</a>
                                 </li>
                                 <li class="menu__item insta d-sm-none">
-                                    <a href="https://www.instagram.com/goodzone_inc/" target="_blank">goodzone_inc</a>
+                                    <a href="https://www.instagram.com/goodzone.group/" target="_blank">goodzone.group</a>
                                 </li>
                             </ul>
                         </div>
@@ -132,7 +130,7 @@
             </div>
             <div class="row">
                 <div class="m-auto col-12 col-lg-7">
-                    <p class="service__text">Сначала мы ищем сотрудников по критериям заказчика (должность, ЗП,
+                    <p class="service__text">Сначала мы ищем сотрудников по критериям заказчика (должность, заработная плата,
                         занятость, образование и т. д.) на основе нашей собственной базы соискателей, при необходимости
                         задействуем другие источники. Затем приступаем к оценке найденных кандидатов. Смотрим как на
                         профессиональные параметры (опыт, навыки), так и на личные качества, среди которых
@@ -414,7 +412,7 @@
                             <h5>телефон</h5>
                         </div>
                         <div class="contacts__item">
-                            <p>+7 961 574 85 63</p>
+                            <p>+7 343 382 11 67</p>
                         </div>
 
                         <div class="d-flex contacts__item-title contacts__mail">
@@ -477,14 +475,14 @@
                     </div>
                     <div class="offset-lg-2 col-auto col-lg-3 ml-auto align-self-center wow fadeIn slow">
                         <div class="phone">
-                            <a href="tel:+73433696969">+7 (343) 369 69 69</a>
+                            <a href="tel:+73433821167">+7 (343) 382 11 67</a>
                         </div>
                         <div class="insta">
-                            <a href="https://www.instagram.com/goodzone_inc/" target="_blank">goodzone_inc</a>
+                            <a href="https://www.instagram.com/goodzone.group/" target="_blank">goodzone.group</a>
                         </div>
                     </div>
                     <div class="col-3 d-none d-lg-block align-self-center wow fadeInRight">
-                        <button>
+                        <button class="smartlid__call-button_custom">
                             Заказать звонок
                         </button>
                     </div>
@@ -515,10 +513,9 @@
     </div>
 
 </body>
-
+<script src="js/jquery-3.4.1.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
 <script>
     new WOW().init();
     var mySwiper = new Swiper('.swiper-container', {
@@ -540,6 +537,22 @@
             el: '.swiper-scrollbar',
         },
     });
+
+    $(function ($) {
+        $.getScript('/smartlid/smartlid.js', function () {
+            $('body').smartLid({
+
+            });
+        });
+
+        function addStyle(href) {
+            elem = document.createElement("link");
+            elem.href = href;
+            elem.rel = 'stylesheet';
+            document.head.appendChild(elem);
+        }
+        addStyle('/smartlid/css/main.css');
+    }(jQuery));
 </script>
 <script src="js/main.js"></script>
 

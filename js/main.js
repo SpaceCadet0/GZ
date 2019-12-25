@@ -1,4 +1,14 @@
-    //menu scroll
+    //preloader
+
+       $(window).on('load', function () {
+        var $preloader = $('#page-preloader'),
+            $spinner   = $preloader.find('.spinner');
+        $spinner.fadeOut();
+        $preloader.delay(350).fadeOut(500);
+    });
+   
+   
+   //menu scroll
     const anchors = document.querySelectorAll('a[href*="#m-"]')
 
     for (let anchor of anchors) {
@@ -59,32 +69,69 @@
         if (!its_menu && !its_hamburger && menu_is_active) {
             toggleMenu();
         }
-    })
+    });
 
     //callback
-    $("#submit").click(function() { 
-        var name = $('input[name=text]').val(); 
-        var tel = $('input[name=phone]').val();
-        var otpravka = true;
-        if(name==""){ 
-        otpravka = false;
-        }
-        if(tel==""){ 
-        otpravka = false;
-        }
-        if(otpravka) 
-        {
+    var p = $('.window_wrap');
+    $('.telButton').click(function() {
+     p.css({'display':'block'}).hide().fadeIn(1000);
+    });
+    
+    $('.window_close').click(function() {
+        p.css({'display':'none'});
+       });
        
-        dannie = {'polz_name':name, 'polz_tel':tel};
-        $.post('senda.php', dannie, function(otvet){ 
-        rezultat = '<div style="color:#D80018;">'+otvet.text+'</div>';
-        $("#form_result").hide().html(rezultat).slideDown();
-        }, 'json'); 
-        }
+    p.click(function(event) {
+    if(event.target == this) {
+    $(this).css({'display':'none'});
+    }
+    });
+
+    $('#telButton').click(function(event) {
+ 
+        event.preventDefault();
+       
+        var tel = $('#telForm').val();
+       
+        $('#backPhone').fadeOut(500,function() {
+       
+       $('<p>Отправка!</p>').appendTo($('.window')).hide().fadeIn(300,function() {
+       
+       $.ajax({
+       
+       type: 'POST',
+       url: 'srv.php',
+       data: 'tel=' + tel,
+       dataType: 'json',
+       success : function (json) {
+       if(json.error) {
+       $('.window p').last().remove();
+       $('#backPhone').fadeIn(300, function() {
+       alert(json.error);
+       });
+       }
+       else {
+       $('.window p').last().fadeOut(300, function() {
+       
+       $(this).text('Заявка принята!').fadeIn(300, function () {
+       
+       $('.window_wrap').delay(1500).fadeOut(300);
+       
+       });
+       
+       });
+       }
+       }
+       
+       });
+       
+       });
+       
         });
+       
+       });
 
-
-
+       
     //tabs
     var tab; // заголовок вкладки
     var tabContent; // блок содержащий контент вкладки
@@ -97,9 +144,9 @@
     }
 
     document.getElementById('tabs').onclick = function (event) {
-        let target = event.target;
+        var target = event.target;
         if (target.className == 'tab__title') {
-            for (let i = 0; i < tab.length; i++) {
+            for (var i = 0; i < tab.length; i++) {
                 if (target == tab[i]) {
                     showTabsContent(i);
                     break;
@@ -125,11 +172,3 @@
         }
     };
 
-    //preloader
-
-    $(window).on('load', function () {
-        var $preloader = $('#p_prldr'),
-            $svg_anm   = $preloader.find('.svg_anm');
-        $svg_anm.fadeOut();
-        $preloader.delay(500).fadeOut('slow');
-    });

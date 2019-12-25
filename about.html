@@ -13,7 +13,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/glider.css">
     <link rel="stylesheet" href="css/main.css">
         <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56449374-1"></script>
@@ -27,9 +26,7 @@
 </head>
 
 <body>
-        <div id="p_prldr">
-                <div class="contpre"><span class="svg_anm"></span></div>
-            </div>
+        <div id="page-preloader"><span class="spinner"></span></div>
             <div id="tabs"></div>
     <header id="header" class="header">
         <div class="header__info">
@@ -37,18 +34,18 @@
                 <div class="row">
                     <div class="col d-flex">
                         <div class="wow fadeInDown">
-                            <img src="img/svg/logo1.svg" alt="Goodzone" class="logo">
-                        </div>
+                                <a href="/index.html"><img src="img/svg/logo1.svg"  alt="Goodzone" class="logo"></a>
+                            </div>
                         <div class="d-md-none ml-auto align-self-center menu__toggle wow fadeInRight"
                             title="Открыть меню"></div>
                     </div>
 
                     <div class="d-none d-md-block offset-lg-2 col-5 col-lg-3 ml-auto align-self-center wow fadeIn slow">
                         <div class="phone">
-                            <a href="tel:+73433696969">+7 (343) 369 69 69</a>
+                            <a href="tel:+73433821167">+7 (343) 382 11 67</a>
                         </div>
                         <div class="insta">
-                            <a href="https://www.instagram.com/goodzone_inc/" target="_blank">goodzone_inc</a>
+                            <a href="https://www.instagram.com/goodzone.group/" target="_blank">goodzone.group</a>
                         </div>
                     </div>
                     <div class="col-auto d-none d-lg-block align-self-center wow fadeInRight">
@@ -62,7 +59,7 @@
         <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-9 m-auto">
-                        <nav class="menu wow fadeIn slow">
+                        <nav class="menu">
                             <div class="menu__wrapper">
                                 <ul class="justify-content-around menu__items">
                                 <li class="menu__item">
@@ -216,10 +213,10 @@
                     </div>
                     <div class="offset-lg-2 col-auto col-lg-3 ml-auto align-self-center wow fadeIn slow">
                         <div class="phone">
-                            <a href="tel:+73433696969">+7 (343) 369 69 69</a>
+                            <a href="tel:+73433821167">+7 (343) 382 11 67</a>
                         </div>
                         <div class="insta">
-                            <a href="https://www.instagram.com/goodzone_inc/" target="_blank">goodzone_inc</a>
+                            <a href="https://www.instagram.com/goodzone.group/" target="_blank">goodzone.group</a>
                         </div>
                     </div>
                     <div class="col-3 d-none d-lg-block align-self-center wow fadeInRight">
@@ -253,20 +250,26 @@
     </div>
 
     <script src="js/wow.min.js"></script>
-    <script src="js/glider.min.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
 
     <script>
         new WOW().init();
-        new Glider(document.querySelector('.glider'), {
-            slidesToShow: 1,
-            dots: '#dots',
-            draggable: true,
-            arrows: {
-                prev: '.glider-prev',
-                next: '.glider-next'
-            }
-        })
+
+        $(function ($) {
+        $.getScript('/smartlid/smartlid.js', function () {
+            $('body').smartLid({
+
+            });
+        });
+
+        function addStyle(href) {
+            elem = document.createElement("link");
+            elem.href = href;
+            elem.rel = 'stylesheet';
+            document.head.appendChild(elem);
+        }
+        addStyle('/smartlid/css/main.css');
+    }(jQuery));
     </script>
     
     <script src="js/main.js"></script>
